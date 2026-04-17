@@ -2,7 +2,9 @@
 
 {
   imports = [
+    ../../modules/nixos/system/00-core.nix
     ../../modules/nixos/roles/laptop.nix
+    ../../modules/nixos/desktop/wayland/default.nix
     ../../profiles/nixos/minimal.nix
   ];
 
