@@ -16,8 +16,10 @@
   };
 
   fonts.packages = with pkgs; [
-    nerdfonts
+    nerd-fonts.fira-code
+    nerd-fonts.jetbrains-mono
     noto-fonts
+    noto-fonts-emoji
   ];
 
   environment.systemPackages = with pkgs; [
