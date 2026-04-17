@@ -7,7 +7,7 @@
 #    myrepo.url = "github:Sayokeoda/NixOS_btw-configuration";
   };
 
-  outputs = { self, nixpkgs, home-manager, myrepo, ... }:
+  outputs = { self, nixpkgs, home-manager, ... }:
   let
     system = "x86_64-linux";
     pkgs = import nixpkgs { inherit system; };
