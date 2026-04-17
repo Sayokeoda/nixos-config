@@ -4,7 +4,7 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     home-manager.url = "github:nix-community/home-manager";
-    myrepo.url = "github:Sayokeoda/NixOS_btw-configuration";
+#    myrepo.url = "github:Sayokeoda/NixOS_btw-configuration";
   };
 
   outputs = { self, nixpkgs, home-manager, myrepo, ... }:
