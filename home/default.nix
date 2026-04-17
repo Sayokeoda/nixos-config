@@ -13,6 +13,7 @@
   home.packages = with pkgs; [
     neovim
     foot
+    firefox
   ];
 
   programs.home-manager.enable = true;
