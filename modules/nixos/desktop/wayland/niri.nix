@@ -7,7 +7,7 @@
     settings = {
       default_session = {
         command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd niri";
-        user = "greeter"
+        user = "greeter";
       };
     };
   };
@@ -16,4 +16,4 @@
     foot
     neovim
   ];
-};
+}
