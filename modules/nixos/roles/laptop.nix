@@ -19,7 +19,7 @@
   };
 
   environment.systemPackages = with pkgs; [
-    brightnessctlç
+    brightnessctl
     powertop
     acpi
   ];
