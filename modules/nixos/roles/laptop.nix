@@ -18,7 +18,7 @@
     };
   };
 
-  with pkgs; [
+  environment.systemPackages = with pkgs; [
     brightnessctlç
     powertop
     acpi
