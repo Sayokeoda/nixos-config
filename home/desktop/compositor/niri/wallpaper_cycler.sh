@@ -25,7 +25,7 @@ while true; do
       NEW_IMG=$(ls "$BASE_DIR/$FOLDER" | shuf -n 1)
       COUNT=$(ls "$BASE_DIR/$FOLDER" | wc -l)
 
-      [ $COUNT -eq 0 ] && break
+      [ "$COUNT" -eq 0 ] && break
 
       if [ "$COUNT" -le 1 ] ||
 [ "$NEW_IMG" !=  "$LAST_IMG" ]; then
