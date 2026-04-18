@@ -19,7 +19,7 @@
         dpi-aware = "yes";
       };
 
-        color = {
+        colors = {
           alpha = "0.9";
           background = "1a1b26";
           foreground = "c0caf5";
@@ -37,6 +37,26 @@
     withRuby = false;
     withPython3 = false;
   };
+
+  programs.yazi = {
+    enable = true;
+    enableBashIntegration = true;
+
+    settings = {
+      manager = {
+        show_hidden = true;
+
+        sort_by = "mtime";
+      };
+    };
+  };
+
+  home.packages = with pkgs; [
+    ffmpegthumbnailer
+    poppler-utils
+    unzip
+    fzf
+  ];
 
   programs.home-manager.enable = true;
 }
