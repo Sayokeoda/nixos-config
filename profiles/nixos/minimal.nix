@@ -7,6 +7,7 @@
     git
     curl
     wget
+    coreutils
     vim
     btop
   ];
