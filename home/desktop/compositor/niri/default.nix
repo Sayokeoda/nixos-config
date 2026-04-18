@@ -9,6 +9,7 @@
 
   home.packages = with pkgs; [
     awww
+    coreutils
     swaylock
   ];
 }
