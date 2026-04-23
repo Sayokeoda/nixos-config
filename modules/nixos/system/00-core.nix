@@ -1,4 +1,5 @@
 { config, pkgs, lib, ... }:
+
 {
   time.timeZone = "Europe/Madrid";
 
@@ -15,9 +16,14 @@
 
   services.pipewire = {
     enable = true;
+    alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
+    jack.enable = true;
   };
 
-  system.stateVersion = "24.11";
+  services.dbus.enable = true;
+  security.polkit.enable = true;
+
+  system.stateVersion = "25.11";
 }
