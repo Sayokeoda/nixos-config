@@ -1,6 +1,7 @@
 { pkgs, ... }:
 {
   imports = [
+    ./greetd.nix    
     ./niri.nix
   ];
 
