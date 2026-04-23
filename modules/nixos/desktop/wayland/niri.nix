@@ -1,19 +1,18 @@
-{ pkgs, ... }:
+{ config, pkgs, lib, ... }:
+
 {
-  programs.niri.enable = true;
+  options.profiles.niri.enable =
+    lib.mkEnableOption "niri compositor";
 
-  services.greetd = {
-    enable = true;
-    settings = {
-      default_session = {
-        command = "${pkgs.tuigreet}/bin/tuigreet --time --cmd niri";
-        user = "greeter";
-      };
+  config = lib.mkIf config.profiles.niri.enable {
+
+    programs.niri.enable = true;
+
+    # greetd activation
+    modules.greetd = {
+      enable = true;
+      sessionCommand = "${pkgs.tuigreet}/bin/tuigreet --time --cmd niri";
     };
-  };
 
-  environment.systemPackages = with pkgs; [
-    firefox
-    imv
-  ];
+  };
 }
